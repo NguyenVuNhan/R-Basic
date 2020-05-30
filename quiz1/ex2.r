@@ -1,0 +1,10 @@
+A <- array(c(3, 2, 1, 2, -3, 1, 1, 1, 1), dim = c(3,3))
+B <- array(c(10, -1, 6), dim = c(3,1))
+C <- solve(A, B)
+print(C)
+typeof(C)
+row.names <- c("x","y","z")
+column.names <- c("result")
+
+result <- array(C, dim=c(3,1), dimnames=list(row.names, column.names))
+print(result)
